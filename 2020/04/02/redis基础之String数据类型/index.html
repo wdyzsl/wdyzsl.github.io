@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>行深の小站</title>
+  <title>redis基础之String数据类型 | 行深の小站</title>
   <meta name="keywords" content="">
-  <meta name="description" content="行深の小站">
+  <meta name="description" content="redis基础之String数据类型 | 行深の小站">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta property="og:type" content="website">
 <meta property="og:title" content="categories">
@@ -48,7 +48,7 @@
 </div>
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/" class="avatar_target">
     <img class="avatar" src="/img/avatar.jpg" />
@@ -293,12 +293,54 @@
         </div>
     </div>
 </aside>
-<div class="post index">
+<div class="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-redis基础之String数据类型" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#行深の小站"><span class="toc-text">行深の小站</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#关于行深の小站"><span class="toc-text">关于行深の小站</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#博客平台"><span class="toc-text">博客平台</span></a></li></ol></li></ol>
+        <h1 class="article-title">redis基础之String数据类型</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2020-04-02 21:32:15'>2020-04-02 21:32</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+        <span class="top-comment" title="跳转至评论区">
+            <a href="#comments">
+                评论:<span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </a>
+        </span>
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        
     
 <style>
     .left-col .switch-btn,
@@ -311,25 +353,35 @@
     }
 </style>
 </div>
-            <h1 id="行深の小站"><a href="#行深の小站" class="headerlink" title="行深の小站"></a>行深の小站</h1><p>一个兴趣使然的人，热爱学习，热爱生活，要将学习进行到底</p>
-<h2 id="关于行深の小站"><a href="#关于行深の小站" class="headerlink" title="关于行深の小站"></a>关于行深の小站</h2><p><strong>行深の小站</strong>是行深的个人站。</p>
-<p>到目前为止已经写了<code class="article_number"></code>篇文章， 共<code class="site_word_count"></code>字。</p>
-<p>本站访问人数：<code class="site_uv"></code>人次 ， 访问量：<code class="site_pv"></code>次</p>
-<h2 id="博客平台"><a href="#博客平台" class="headerlink" title="博客平台"></a>博客平台</h2><p>这个博客通过 <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> 生成，部署在 <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>，主题 <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank" rel="noopener">3-hexo</a> 已经在github上开源，感谢作者<a href="https://yelog.org/" target="_blank" rel="noopener">阿杰</a></p>
-<p>主要功能：</p>
-<ul>
-<li>搜索支持文章标题、标签(#标签)、作者(@作者)</li>
-<li>pad/手机等移动端适配</li>
-<li>页面全局快捷键 <a href='http://yelog.org/2017/03/24/3-hexo-shortcuts/' target="_blank" rel="noopener">3-hexo快捷键说明</a></li>
-</ul>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 wdyzsl@126.com </span>
+    </div>
+</article>
 
-        </article>
-        
-        <p>
-            <a  class="dashang" onclick="dashangToggle()">赏</a>
-        </p>
-        
-        
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>redis基础之String数据类型</p>
+    
+    <p><span class="copy-title">本文作者:</span><a  title="行深">行深</a></p>
+    <p><span class="copy-title">发布时间:</span>2020-04-02, 21:32:15</p>
+    <p><span class="copy-title">最后更新:</span>2020-04-02, 21:32:15</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/04/02/redis%E5%9F%BA%E7%A1%80%E4%B9%8BString%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" title="redis基础之String数据类型">http://yoursite.com/2020/04/02/redis%E5%9F%BA%E7%A1%80%E4%B9%8BString%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
     <div id="comments"></div>
 <link rel="stylesheet" href="https://jjeejj.github.io/css/gitment.css">
 
@@ -337,7 +389,7 @@
 
 <script>
     var gitment = new Gitment({
-        id: 'http://yoursite.com/', // 可选。默认为 location.href
+        id: 'http://yoursite.com/2020/04/02/redis%E5%9F%BA%E7%A1%80%E4%B9%8BString%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/', // 可选。默认为 location.href
         owner: 'wdyzsl',
         repo: 'wdyzsl.github.io',
         oauth: {
@@ -347,6 +399,13 @@
     })
     gitment.render('comments')
 </script>
+
+
+
+
+    
+
+
 
 
     </div>

@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Redis基础之String数据类型的基本操作 | 行深の小站</title>
+  <title>Linux系统安装Redis | 行深の小站</title>
   <meta name="keywords" content=" redis ">
-  <meta name="description" content="Redis基础之String数据类型的基本操作 | 行深の小站">
+  <meta name="description" content="Linux系统安装Redis | 行深の小站">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta property="og:type" content="website">
 <meta property="og:title" content="categories">
@@ -319,9 +319,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-Redis基础之String数据类型的基本操作" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-Linux系统安装redis" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">Redis基础之String数据类型的基本操作</h1>
+        <h1 class="article-title">Linux系统安装Redis</h1>
     
     <div class="article-meta">
         
@@ -343,7 +343,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2020-04-02 22:22:53'>2020-04-02 22:17</time>
+        创建时间:<time class="date" title='更新时间: 2020-04-03 20:18:56'>2020-04-03 20:18</time>
         
     </div>
     <div class="article-meta">
@@ -376,7 +376,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#String数据类型的基本操作"><span class="toc-text">String数据类型的基本操作</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、设置数据"><span class="toc-text">1、设置数据</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#添加数据"><span class="toc-text">添加数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#获取数据"><span class="toc-text">获取数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#删除数据"><span class="toc-text">删除数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加-修改多个数据"><span class="toc-text">添加&#x2F;修改多个数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#获取多个数据"><span class="toc-text">获取多个数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#获取字符串的个数"><span class="toc-text">获取字符串的个数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#追加信息到原始信息后部（如果原始信息存在就追加，否则新建）"><span class="toc-text">追加信息到原始信息后部（如果原始信息存在就追加，否则新建）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设置数值数据增加指定范围的值"><span class="toc-text">设置数值数据增加指定范围的值</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#自增加1"><span class="toc-text">自增加1</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#增加指定数值"><span class="toc-text">增加指定数值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#增加指定的小数"><span class="toc-text">增加指定的小数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设置数值数据减少指定范围的值"><span class="toc-text">设置数值数据减少指定范围的值</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#自减1"><span class="toc-text">自减1</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#减少指定数值"><span class="toc-text">减少指定数值</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#设置生命周期"><span class="toc-text">设置生命周期</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据库中的热点数据key命名惯例"><span class="toc-text">数据库中的热点数据key命名惯例</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#打开终端依次输入如下命令"><span class="toc-text">打开终端依次输入如下命令</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -392,44 +392,21 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="String数据类型的基本操作"><a href="#String数据类型的基本操作" class="headerlink" title="String数据类型的基本操作"></a>String数据类型的基本操作</h1><h2 id="1、设置数据"><a href="#1、设置数据" class="headerlink" title="1、设置数据"></a>1、设置数据</h2><h3 id="添加数据"><a href="#添加数据" class="headerlink" title="添加数据"></a>添加数据</h3><pre><code class="sql">set key value
-set name wei</code></pre>
-<h3 id="获取数据"><a href="#获取数据" class="headerlink" title="获取数据"></a>获取数据</h3><pre><code class="sql">get key
-get wei</code></pre>
-<h3 id="删除数据"><a href="#删除数据" class="headerlink" title="删除数据"></a>删除数据</h3><pre><code class="sql">del key
-del wei</code></pre>
-<h3 id="添加-修改多个数据"><a href="#添加-修改多个数据" class="headerlink" title="添加/修改多个数据"></a>添加/修改多个数据</h3><pre><code class="sql">mset key1 value1 key2 value2
-mset name1 li name2 wang</code></pre>
-<h3 id="获取多个数据"><a href="#获取多个数据" class="headerlink" title="获取多个数据"></a>获取多个数据</h3><pre><code class="sql">mget key1 key2
-mget name1 name2</code></pre>
-<h3 id="获取字符串的个数"><a href="#获取字符串的个数" class="headerlink" title="获取字符串的个数"></a>获取字符串的个数</h3><pre><code class="vbnet">strlen key
-strlen name</code></pre>
-<h3 id="追加信息到原始信息后部（如果原始信息存在就追加，否则新建）"><a href="#追加信息到原始信息后部（如果原始信息存在就追加，否则新建）" class="headerlink" title="追加信息到原始信息后部（如果原始信息存在就追加，否则新建）"></a>追加信息到原始信息后部（如果原始信息存在就追加，否则新建）</h3><p><strong>原来的value为wang,追加之后就为wangli</strong></p>
-<pre><code class="vbnet">append key value
-append name li</code></pre>
-<h3 id="设置数值数据增加指定范围的值"><a href="#设置数值数据增加指定范围的值" class="headerlink" title="设置数值数据增加指定范围的值"></a>设置数值数据增加指定范围的值</h3><p><strong><font color=blue>这里的value都为整数型</font></strong></p>
-<h4 id="自增加1"><a href="#自增加1" class="headerlink" title="自增加1"></a>自增加1</h4><pre><code class="vbnet">incr key 
-incr num</code></pre>
-<h4 id="增加指定数值"><a href="#增加指定数值" class="headerlink" title="增加指定数值"></a>增加指定数值</h4><pre><code class="vbnet">incrby key increment
-incrby num 5</code></pre>
-<h4 id="增加指定的小数"><a href="#增加指定的小数" class="headerlink" title="增加指定的小数"></a>增加指定的小数</h4><pre><code class="vbnet">incrbyfloat key increment
-incrbyfloat num 0.5</code></pre>
-<h3 id="设置数值数据减少指定范围的值"><a href="#设置数值数据减少指定范围的值" class="headerlink" title="设置数值数据减少指定范围的值"></a>设置数值数据减少指定范围的值</h3><h4 id="自减1"><a href="#自减1" class="headerlink" title="自减1"></a>自减1</h4><pre><code class="vbnet">decr key
-decr num</code></pre>
-<h4 id="减少指定数值"><a href="#减少指定数值" class="headerlink" title="减少指定数值"></a>减少指定数值</h4><pre><code class="vbnet">decrby key increment
-decrby num 3</code></pre>
-<h2 id="设置生命周期"><a href="#设置生命周期" class="headerlink" title="设置生命周期"></a>设置生命周期</h2><p><strong>存活秒数</strong></p>
-<pre><code class="vbnet">setex key second value
-setex name 10 wei</code></pre>
-<p> <strong>存活毫秒数</strong></p>
-<pre><code class="vbnet">psetex key milliseconds value
-psetex name 10 wei</code></pre>
-<h2 id="数据库中的热点数据key命名惯例"><a href="#数据库中的热点数据key命名惯例" class="headerlink" title="数据库中的热点数据key命名惯例"></a>数据库中的热点数据key命名惯例</h2><p>第一种方式：<font color= red>set 表名:主键:主键值:字段名 字段值</font></p>
-<pre><code class="vbnet">set user:id:001:fans 9000</code></pre>
-<pre><code class="vbnet">get user:id:001:fans</code></pre>
-<p>第二种方式：</p>
-<pre><code class="vbnet">set user:id:001 {id:001,fans:900,blog:24}</code></pre>
-<pre><code class="vbnet">mget user:id:001</code></pre>
+        <h2 id="打开终端依次输入如下命令"><a href="#打开终端依次输入如下命令" class="headerlink" title="打开终端依次输入如下命令"></a>打开终端依次输入如下命令</h2><blockquote>
+<p>这里的?号是redis的版本号，例如5.0.8<br>下载安装包<br><code>wget http://download.redis.io/releases/redis-?.?.?.tar.gz</code></p>
+</blockquote>
+<blockquote>
+<p>解压<br>redis-5.8是文件名<br><code>tar –xvf redis-5.0.8.tar.gz</code></p>
+</blockquote>
+<blockquote>
+<p>yum安装gcc<br><code>yum install gcc-c++</code></p>
+</blockquote>
+<blockquote>
+<p>清空上次编译失败残留文件<br><code>make distclean</code></p>
+</blockquote>
+<blockquote>
+<p>执行编译及安装<br><code>make &amp;&amp; make install</code></p>
+</blockquote>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 wdyzsl@126.com </span>
@@ -443,12 +420,12 @@ psetex name 10 wei</code></pre>
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>Redis基础之String数据类型的基本操作</p>
+    <p><span class="copy-title">文章标题:</span>Linux系统安装Redis</p>
     
     <p><span class="copy-title">本文作者:</span><a  title="行深">行深</a></p>
-    <p><span class="copy-title">发布时间:</span>2020-04-02, 22:17:25</p>
-    <p><span class="copy-title">最后更新:</span>2020-04-02, 22:22:53</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/04/02/Redis%E5%9F%BA%E7%A1%80%E4%B9%8BString%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" title="Redis基础之String数据类型的基本操作">http://yoursite.com/2020/04/02/Redis%E5%9F%BA%E7%A1%80%E4%B9%8BString%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</a>
+    <p><span class="copy-title">发布时间:</span>2020-04-03, 20:18:18</p>
+    <p><span class="copy-title">最后更新:</span>2020-04-03, 20:18:56</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/04/03/Linux%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85redis/" title="Linux系统安装Redis">http://yoursite.com/2020/04/03/Linux%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85redis/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
@@ -463,7 +440,7 @@ psetex name 10 wei</code></pre>
 
 <script>
     var gitment = new Gitment({
-        id: 'http://yoursite.com/2020/04/02/Redis%E5%9F%BA%E7%A1%80%E4%B9%8BString%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/', // 可选。默认为 location.href
+        id: 'http://yoursite.com/2020/04/03/Linux%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85redis/', // 可选。默认为 location.href
         owner: 'wdyzsl',
         repo: 'wdyzsl.github.io',
         oauth: {
